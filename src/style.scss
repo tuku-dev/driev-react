@@ -1,0 +1,65 @@
+@import "./_scss/variables";
+@import "./_scss/mixins";
+
+:root {
+  --bs-body-font-family: "roboto", serif;
+}
+
+body {
+  // background: url("./assets/imgs/Home.png") no-repeat top center;
+  * {
+    &:not(::after),
+    &:not(::before) {
+      font-family: var(--bs-body-font-family) !important;
+    }
+  }
+}
+@import "./_scss/common";
+
+.banner {
+  background: url(assets/imgs/hero-bg.png);
+}
+
+header {
+  .container {
+    .header-left {
+      .partner-with-us {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        letter-spacing: 1.25px;
+      }
+    }
+    .header-right {
+      .nav {
+        .nav-item {
+          .nav-link {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 1.25px;
+            color: $quaternary;
+            &.active {
+              color: $primary;
+              position: relative;
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 20px;
+                height: 2px;
+                background: $primary;
+              }
+              &::after {
+                left: 40px;
+                box-shadow: 10px 0px 0 0 $primary;
+                width: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
