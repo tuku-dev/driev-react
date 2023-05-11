@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../../shared/header/Header";
 import BookADrive from "./sections/book-a-ride/BookADrive";
 import Logo from "../../assets/imgs/driEV.svg";
+import "./home.css";
+import RecomendedPlans from "./sections/recommended-plans/RecomendedPlans";
 
 export default function Home() {
   return (
@@ -19,7 +21,9 @@ export default function Home() {
             </div>
             <BookADrive />
           </div>
-          <div className="container px-3 px-lg-1"></div>
+          <div className="container px-3 px-lg-1">
+            <RecomendedPlans />
+          </div>
         </div>
       </div>
     </>

@@ -1,10 +1,10 @@
 export default function Navigation() {
   const links = [
-    { link: "./", name: "Home", active: true },
-    { link: "pricing", name: "Pricing" },
-    { link: "support", name: "Support" },
-    { link: "contact-us", name: "Contact Us" },
-    { link: "about-us", name: "About Us" },
+    { id: 1, link: "./", name: "Home", active: true },
+    { id: 2, link: "pricing", name: "Pricing" },
+    { id: 3, link: "support", name: "Support" },
+    { id: 4, link: "contact-us", name: "Contact Us" },
+    { id: 5, link: "about-us", name: "About Us" },
   ];
 
   function Anchor({ data }) {
@@ -23,11 +23,9 @@ export default function Navigation() {
   return (
     <>
       <ul className="nav justify-content-end align-items-center">
-        <Anchor data={links[0]} />
-        <Anchor data={links[1]} />
-        <Anchor data={links[2]} />
-        <Anchor data={links[3]} />
-        <Anchor data={links[4]} />
+        {links.map((l) => {
+          return <Anchor key={l.id} data={l} />;
+        })}
       </ul>
     </>
   );
