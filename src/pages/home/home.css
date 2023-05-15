@@ -220,19 +220,25 @@
   line-height: 23px;
   letter-spacing: 0.15px;
 }
-.home-page .hero-section .recommended-section-container .plans .plan-item {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list {
+  margin: 0 -0.5rem;
+}
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide > div {
+  padding: 0 0.5rem;
+}
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item {
   background: #d7f9cf;
   border-radius: 10px;
-  display: grid;
+  display: grid !important;
   grid-template-columns: 230px auto 113px;
   gap: 15px;
 }
 @media screen and (max-width: 991px) {
-  .home-page .hero-section .recommended-section-container .plans .plan-item {
+  .home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item {
     grid-template-columns: repeat(2, 50%);
   }
 }
-.home-page .hero-section .recommended-section-container .plans .plan-item .plan-image img {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .plan-image img {
   max-width: 255px;
   max-height: 180px;
   -o-object-position: center center;
@@ -241,11 +247,11 @@
      object-fit: cover;
 }
 @media screen and (max-width: 991px) {
-  .home-page .hero-section .recommended-section-container .plans .plan-item .plan-image img {
+  .home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .plan-image img {
     max-width: 100%;
   }
 }
-.home-page .hero-section .recommended-section-container .plans .plan-item .plan-details {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .plan-details {
   padding: 0;
   list-style: none;
   gap: 15px;
@@ -253,15 +259,15 @@
   grid-column-start: 2;
 }
 @media screen and (max-width: 1199px) {
-  .home-page .hero-section .recommended-section-container .plans .plan-item .plan-details {
+  .home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .plan-details {
     grid-column: 2/4;
   }
 }
-.home-page .hero-section .recommended-section-container .plans .plan-item .plan-details > li {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .plan-details > li {
   position: relative;
   padding-left: 25px;
 }
-.home-page .hero-section .recommended-section-container .plans .plan-item .plan-details > li::before {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .plan-details > li::before {
   content: "";
   background: #3db54a;
   position: absolute;
@@ -274,7 +280,7 @@
   margin-bottom: auto;
   border-radius: 50%;
 }
-.home-page .hero-section .recommended-section-container .plans .plan-item .plan-details > li::after {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .plan-details > li::after {
   content: "";
   position: absolute;
   width: 10px;
@@ -289,33 +295,37 @@
   transform: rotate(-45deg);
 }
 @media screen and (max-width: 1199px) {
-  .home-page .hero-section .recommended-section-container .plans .plan-item .speed-column {
+  .home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .speed-column {
     grid-column: 1/2;
     grid-row-start: 2;
   }
 }
-.home-page .hero-section .recommended-section-container .plans .plan-item .speed-column .speed-section {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .speed-column .speed-section {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #3db54a;
 }
-.home-page .hero-section .recommended-section-container .plans .plan-item .speed-column .price-per-duration {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-list .slick-slide .plan-item .speed-column .price-per-duration {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.15px;
   color: #3db54a;
 }
-.home-page .hero-section .recommended-section-container .plans + .dots {
-  text-align: center;
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-dots {
   margin-top: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
+  text-align: center;
+  padding: 0;
+  list-style: none;
 }
-.home-page .hero-section .recommended-section-container .plans + .dots .dot {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-dots > li {
+  display: inline-block;
+  font-size: 0;
+  margin-right: 10px;
+  color: transparent;
+}
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-dots > li button {
   width: 13px;
   height: 13px;
   border-radius: 13px;
@@ -324,7 +334,7 @@
   transition: width 0.3s ease-in-out;
   -webkit-appearance: media-slider;
 }
-.home-page .hero-section .recommended-section-container .plans + .dots .dot.active {
+.home-page .hero-section .recommended-section-container .plans .slick-slider .slick-dots > li.slick-active button {
   width: 23px;
   background: #3db54a;
 }/*# sourceMappingURL=home.css.map */

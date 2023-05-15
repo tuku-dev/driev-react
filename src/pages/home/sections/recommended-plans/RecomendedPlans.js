@@ -55,6 +55,7 @@ export default function RecomendedPlans() {
     slidesToShow: 2,
     slidesToScroll: 1,
     gap: 15,
+    arrows: false,
   };
   return (
     <div className="recommended-section-container">
@@ -63,7 +64,7 @@ export default function RecomendedPlans() {
         <Slider {...settings}>
           {planList.map((x) => {
             return (
-              <div className="plan-item p-3 pb-3 pb-lg-5 " key={x.id}>
+              <div className="plan-item p-3 pb-3 pb-lg-5" key={x.id}>
                 <SliderItem plan={x} />
               </div>
             );

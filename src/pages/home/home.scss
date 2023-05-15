@@ -53,12 +53,14 @@
 
       .city-section {
         .search-city {
-          background: url("../../assets/imgs/search-icon.svg") no-repeat right 10px center #fff;
+          background: url("../../assets/imgs/search-icon.svg") no-repeat right
+            10px center #fff;
         }
       }
       .rental-type-section {
         .search-type {
-          background: url("../../assets/imgs/select-box-drop-down.svg") no-repeat right 10px center #fff;
+          background: url("../../assets/imgs/select-box-drop-down.svg")
+            no-repeat right 10px center #fff;
           color: $quaternary;
         }
       }
@@ -76,7 +78,8 @@
           border: 1px solid #ced4da;
           appearance: none;
           border-radius: 0.375rem;
-          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          transition: border-color 0.15s ease-in-out,
+            box-shadow 0.15s ease-in-out;
           height: 38.48px;
           .select-duration {
             border: none;
@@ -113,7 +116,8 @@
           border: 1px solid #ced4da;
           appearance: none;
           border-radius: 0.375rem;
-          transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+          transition: border-color 0.15s ease-in-out,
+            box-shadow 0.15s ease-in-out;
           height: 38.48px;
           display: grid;
           grid-template-columns: repeat(2, 50%);
@@ -201,103 +205,121 @@
       }
 
       .plans {
-        .plan-item {
-          background: $primary-light;
-          border-radius: $radius;
-          display: grid;
-          grid-template-columns: 230px auto 113px;
-          gap: 15px;
-          @media screen and (max-width: 991px) {
-            grid-template-columns: repeat(2, 50%);
-          }
-          .plan-image img {
-            max-width: 255px;
-            max-height: 180px;
-            object-position: center center;
-            object-fit: cover;
-            @media screen and (max-width: 991px) {
-              max-width: 100%;
+        .slick-slider {
+          .slick-list {
+            margin: 0 -0.5rem;
+            .slick-slide {
+              > div {
+                padding: 0 0.5rem;
+              }
+              .plan-item {
+                background: $primary-light;
+                border-radius: $radius;
+                display: grid !important;
+                grid-template-columns: 230px auto 113px;
+                gap: 15px;
+                @media screen and (max-width: 991px) {
+                  grid-template-columns: repeat(2, 50%);
+                }
+
+                .plan-image img {
+                  max-width: 255px;
+                  max-height: 180px;
+                  object-position: center center;
+                  object-fit: cover;
+                  @media screen and (max-width: 991px) {
+                    max-width: 100%;
+                  }
+                }
+                .plan-details {
+                  padding: 0;
+                  list-style: none;
+                  gap: 15px;
+                  grid-row: 1/3;
+                  grid-column-start: 2;
+                  @media screen and (max-width: 1199px) {
+                    grid-column: 2/4;
+                  }
+                  > li {
+                    position: relative;
+                    padding-left: 25px;
+                    &::before {
+                      content: "";
+                      background: $primary;
+                      position: absolute;
+                      left: 0;
+                      top: 0;
+                      bottom: 0;
+                      height: 20px;
+                      width: 20px;
+                      margin-top: auto;
+                      margin-bottom: auto;
+                      border-radius: 50%;
+                    }
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      width: 10px;
+                      height: 5px;
+                      border-left: 2px solid $tertiary;
+                      border-bottom: 2px solid $tertiary;
+                      left: 5px;
+                      top: 0;
+                      bottom: 0;
+                      margin-top: auto;
+                      margin-bottom: auto;
+                      transform: rotate(-45deg);
+                    }
+                  }
+                }
+                .speed-column {
+                  @media screen and (max-width: 1199px) {
+                    grid-column: 1/2;
+                    grid-row-start: 2;
+                  }
+                  .speed-section {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: $primary;
+                  }
+                  .price-per-duration {
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    letter-spacing: 0.15px;
+                    color: $primary;
+                  }
+                }
+              }
             }
           }
-          .plan-details {
+
+          .slick-dots {
+            margin-top: 35px;
+            text-align: center;
             padding: 0;
             list-style: none;
-            gap: 15px;
-            grid-row: 1/3;
-            grid-column-start: 2;
-            @media screen and (max-width: 1199px) {
-              grid-column: 2/4;
-            }
             > li {
-              position: relative;
-              padding-left: 25px;
-              &::before {
-                content: "";
-                background: $primary;
-                position: absolute;
-                left: 0;
-                top: 0;
-                bottom: 0;
-                height: 20px;
-                width: 20px;
-                margin-top: auto;
-                margin-bottom: auto;
-                border-radius: 50%;
+              display: inline-block;
+              font-size: 0;
+              margin-right: 10px;
+              color: transparent;
+              button {
+                width: 13px;
+                height: 13px;
+                border-radius: 13px;
+                padding: 0;
+                background: $tertiary;
+                transition: width 0.3s ease-in-out;
+                -webkit-appearance: media-slider;
               }
-              &::after {
-                content: "";
-                position: absolute;
-                width: 10px;
-                height: 5px;
-                border-left: 2px solid $tertiary;
-                border-bottom: 2px solid $tertiary;
-                left: 5px;
-                top: 0;
-                bottom: 0;
-                margin-top: auto;
-                margin-bottom: auto;
-                transform: rotate(-45deg);
+              &.slick-active {
+                button {
+                  width: 23px;
+                  background: $primary;
+                }
               }
-            }
-          }
-          .speed-column {
-            @media screen and (max-width: 1199px) {
-              grid-column: 1/2;
-              grid-row-start: 2;
-            }
-            .speed-section {
-              font-weight: 700;
-              font-size: 24px;
-              line-height: 28px;
-              color: $primary;
-            }
-            .price-per-duration {
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 19px;
-              letter-spacing: 0.15px;
-              color: $primary;
-            }
-          }
-        }
-        + .dots {
-          text-align: center;
-          margin-top: 35px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          .dot {
-            width: 13px;
-            height: 13px;
-            border-radius: 13px;
-            padding: 0;
-            background: $tertiary;
-            transition: width 0.3s ease-in-out;
-            -webkit-appearance: media-slider;
-            &.active {
-              width: 23px;
-              background: $primary;
             }
           }
         }
