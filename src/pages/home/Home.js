@@ -1,9 +1,10 @@
 import React from "react";
 import Header from "../../shared/header/Header";
-import BookADrive from "./sections/book-a-ride/BookADrive";
+import BookADrive from "./sections/BookADrive";
 import Logo from "../../assets/imgs/driEV.svg";
 import "./home.css";
 import RecomendedPlans from "./sections/recommended-plans/RecomendedPlans";
+import ThreeCards from "./sections/ThreeCards";
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
             <RecomendedPlans />
           </div>
         </div>
+
+        <ThreeCards />
       </div>
     </>
   );

@@ -1,5 +1,5 @@
-import Plus from "../../../../assets/imgs/plus-icon.svg";
-import Minus from "../../../../assets/imgs/minus-icon.svg";
+import Plus from "../../../assets/imgs/plus-icon.svg";
+import Minus from "../../../assets/imgs/minus-icon.svg";
 
 export default function BookADrive() {
   return (
