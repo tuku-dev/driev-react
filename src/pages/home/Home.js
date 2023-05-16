@@ -5,6 +5,7 @@ import Logo from "../../assets/imgs/driEV.svg";
 import "./home.css";
 import RecomendedPlans from "./sections/recommended-plans/RecomendedPlans";
 import ThreeCards from "./sections/ThreeCards";
+import ThingsUSDKnow from "./sections/ThingsUSDKnow";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
 
         <ThreeCards />
       </div>
+
+      <ThingsUSDKnow />
     </>
   );
 }

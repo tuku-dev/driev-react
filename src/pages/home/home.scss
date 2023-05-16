@@ -4,6 +4,55 @@
 /**
  * Home page
  */
+
+.slick-slider {
+  .slick-list {
+    margin: 0 -0.5rem;
+    .slick-slide {
+      > div {
+        padding: 0 0.5rem;
+      }
+    }
+  }
+}
+.slick-dots {
+  margin-top: 35px;
+  text-align: center;
+  padding: 0;
+  list-style: none;
+  @media screen and (max-width: 991px) {
+    margin-top: 15px;
+  }
+  > li {
+    display: inline-block;
+    font-size: 0;
+    margin-right: 10px;
+    color: transparent;
+    button {
+      width: 13px;
+      height: 13px;
+      border-radius: 13px;
+      padding: 0;
+      background: $tertiary;
+      transition: width 0.3s ease-in-out;
+      -webkit-appearance: media-slider;
+      @media screen and (max-width: 991px) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &.slick-active {
+      button {
+        width: 23px;
+        background: $primary;
+        @media screen and (max-width: 991px) {
+          width: 16px;
+        }
+      }
+    }
+  }
+}
+
 .home-page {
   .hero-section {
     background: url("../../assets/imgs/hero-bg.png") no-repeat bottom center;
@@ -207,11 +256,7 @@
       .plans {
         .slick-slider {
           .slick-list {
-            margin: 0 -0.5rem;
             .slick-slide {
-              > div {
-                padding: 0 0.5rem;
-              }
               .plan-item {
                 background: $primary-light;
                 border-radius: $radius;
@@ -294,34 +339,144 @@
               }
             }
           }
+        }
+      }
+    }
+  }
 
-          .slick-dots {
-            margin-top: 35px;
-            text-align: center;
-            padding: 0;
-            list-style: none;
-            > li {
-              display: inline-block;
-              font-size: 0;
-              margin-right: 10px;
-              color: transparent;
-              button {
-                width: 13px;
-                height: 13px;
-                border-radius: 13px;
-                padding: 0;
-                background: $tertiary;
-                transition: width 0.3s ease-in-out;
-                -webkit-appearance: media-slider;
-              }
-              &.slick-active {
-                button {
-                  width: 23px;
-                  background: $primary;
-                }
-              }
+  .three-cards {
+    .slick-slider {
+      .slick-list {
+        padding-top: 15px;
+      }
+    }
+    .card {
+      background: $primary-light;
+      text-align: center;
+      position: relative;
+      padding-top: 100px;
+      margin-top: 40px;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      border-radius: $radius;
+      gap: 4.5em;
+      @media screen and (max-width: 991px) {
+        padding-top: 50px;
+        gap: 1.5em;
+      }
+      > img {
+        position: absolute;
+        top: -50px;
+        left: 40px;
+        @media screen and (max-width: 991px) {
+          max-width: 30%;
+          left: 10%;
+          top: -10%;
+          max-height: 70px;
+        }
+        // @media screen and (max-width: 1399px) {
+        //   max-width: ;
+        // }
+      }
+      h3 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+        color: $secondary;
+        @media screen and (max-width: 1399px) {
+          font-size: 14px;
+        }
+        @media screen and (max-width: 1399px) {
+          font-size: 10px;
+        }
+      }
+      @media screen and (max-width: 1399px) {
+        margin-top: 50px;
+      }
+    }
+    .slick-dots {
+      > li {
+        button {
+          background-color: $quaternary-light;
+        }
+        &.slick-active {
+          button {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .things-you-should-know {
+    padding-bottom: 100px;
+    @media screen and (max-width: 991px) {
+      padding-bottom: 50px;
+    }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 25px;
+    }
+    .detail-box {
+      padding-left: 100px;
+      padding-right: 100px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      box-shadow: 0px 0px 7px rgb(0 0 0 / 20%);
+      border-radius: $radius;
+      margin-top: 60px;
+      @media screen and (max-width: 1199px) {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      @media screen and (max-width: 991px) {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+      .image-box {
+        @media screen and (max-width: 1199px) {
+          width: 100%;
+        }
+        img {
+          max-width: 426px;
+          min-height: 550px;
+          object-fit: cover;
+          object-position: center center;
+          @media screen and (max-width: 1199px) {
+            max-width: unset;
+            width: 100%;
+            min-height: unset;
+          }
+        }
+      }
+      .details-content {
+        flex-grow: 1;
+        font-size: 83%;
+        .detail-item {
+          padding: 7px 25px;
+          padding-bottom: 20px;
+          display: flex;
+          align-items: center;
+          gap: 35px;
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+          border-radius: $radius;
+  
+          .icon-section {
+            padding-top: 10px;
+            margin-left: -6px;
+            > div {
+              zoom: 1.3;
             }
           }
+          .content-section {
+            flex-grow: 1;
+            padding-top: 10px;
+            p {
+              margin-bottom: 0.7rem;
+            }
+          }
+        }
+        .btn {
+          max-width: fit-content;
+          align-self: center;
         }
       }
     }

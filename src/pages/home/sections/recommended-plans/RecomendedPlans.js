@@ -54,8 +54,18 @@ export default function RecomendedPlans() {
     autoplaySpeed: 2500,
     slidesToShow: 2,
     slidesToScroll: 1,
-    gap: 15,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          infinite: true,
+        },
+      },
+    ],
   };
   return (
     <div className="recommended-section-container">
