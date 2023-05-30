@@ -6,6 +6,7 @@ import "./home.css";
 import RecomendedPlans from "./sections/recommended-plans/RecomendedPlans";
 import ThreeCards from "./sections/ThreeCards";
 import ThingsUSDKnow from "./sections/ThingsUSDKnow";
+import Wrapper from "../../components/Wrapper";
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <Header />
       <div className="home-page">
         <div className="hero-section pb-4 mb-3">
-          <div className="container px-3 px-lg-1">
+          <Wrapper>
             <div className="section-title-container text-center">
               <h3 className="text-white section-title d-inline-flex align-items-baseline justify-content-center">
                 <span>Book a</span>
@@ -22,7 +23,7 @@ export default function Home() {
               </h3>
             </div>
             <BookADrive />
-          </div>
+          </Wrapper>
           <div className="container px-3 px-lg-1">
             <RecomendedPlans />
           </div>

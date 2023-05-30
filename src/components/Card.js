@@ -1,4 +1,4 @@
-export default function Card(data) {
-  let classes = data.classes;
-  return <div className={"card " + classes}></div>;
+export default function Card(props) {
+  let classes = props.classes;
+  return <div className={"card " + classes}>{props.children}</div>;
 }

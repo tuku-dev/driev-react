@@ -1,7 +1,11 @@
 import logo from "../../assets/imgs/driEV.svg";
+import Button from "../../components/Button";
 import Navigation from "./Navigation";
 
 export default function Header() {
+  const goToPartnerWithUs = (e) => {
+    console.log("working");
+  };
   return (
     <header>
       <div className="container d-flex align-items-center justify-content-between py-4">
@@ -11,12 +15,11 @@ export default function Header() {
               <img src={logo} alt="Logo" />
             </a>
           </div>
-          <a
-            href="partner-with-us"
-            className="button button-primary rounded-5 px-4 py-2 partner-with-us"
-          >
-            Partner with us
-          </a>
+          <Button
+            className="rounded-5 px-4 py-2 partner-with-us"
+            text="Partner with us"
+            onClick={goToPartnerWithUs}
+          />
         </div>
         <div className="header-right">
           <Navigation />
