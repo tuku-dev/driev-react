@@ -201,11 +201,6 @@
   min-width: 100px;
   font-size: 14px;
 }
-.home-page .hero-section .search-form-container .proceed-section .button:not(.disabled):hover, .home-page .hero-section .search-form-container .proceed-section .button:not(.disabled):active, .home-page .hero-section .search-form-container .proceed-section .button:not(.disabled):focus, .home-page .hero-section .search-form-container .proceed-section .button:not(.disabled):focus-visible, .home-page .hero-section .search-form-container .proceed-section .button:not(.disabled):focus-within {
-  color: #fff;
-  background: #3db54a;
-  border-color: #3db54a;
-}
 .home-page .hero-section .search-form-container .proceed-section .btn {
   width: 100%;
 }

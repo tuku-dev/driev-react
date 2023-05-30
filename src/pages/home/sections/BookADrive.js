@@ -1,5 +1,6 @@
 import Plus from "../../../assets/imgs/plus-icon.svg";
 import Minus from "../../../assets/imgs/minus-icon.svg";
+import Button from "../../../components/Button";
 
 export default function BookADrive() {
   return (
@@ -63,7 +64,7 @@ export default function BookADrive() {
           </div>
         </div>
         <div className="proceed-section">
-          <button className="button">Proceed</button>
+          <Button className="rounded-2" text="Proceed" dataType="disabled" />
           {/* To disable this add class disabled */}
         </div>
       </div>
